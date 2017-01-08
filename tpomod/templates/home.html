@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1>Hello</h1>
+            <p>You are on your Dashboard</p>
+        </div>
+    </div>
+</div>
+<form>
+<div id="heading">
+  <h2><p>Criteria Selection</p></h2>
+</div>
+<br>
+<br>
+<br>
+<div>
+<p>
+	<label>Percentage</label>
+	<input type="text" id="Percentage" name="Percentage" required/>
+</p>
+<p>
+	<label>Backlogs allowed:</label>
+	<input type="text" id="Backlogs" name="Backlogs" required/>
+</p>
+<p>Others:</p>
+		
+    <input type="checkbox" name="gender" value="male"> WISE<br>
+    <input type="checkbox" name="gender" value="female"> MRND<br>
+    <input type="checkbox" name="gender" value="other"> MICROSOFT MENTORSHIP<br>
+    <input type="checkbox" name="gender" value="other"> AMAZON MENTORSHIP<br>
+    <input type="checkbox" name="gender" value="other"> ATL<br>
+    <input type="checkbox" name="gender" value="other"> IOT<br>
+	<br>
+    <input type="submit" id="btn" value="SUBMIT"/>
+</div>
+</form> 
+
+{% endblock %}
