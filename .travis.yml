@@ -3,10 +3,10 @@ python:
   - "3.5"
 
   # PyPy versions
-  - "pypy"
-  - "pypy"  # PyPy2 2.5.0
-  - "pypy3" # Pypy3 2.4.0
-  - "pypy-5.3.1"
+  #- "pypy"
+  #- "pypy"  # PyPy2 2.5.0
+  #- "pypy3" # Pypy3 2.4.0
+  #- "pypy-5.3.1"
 # command to install dependencies
 env:
   - DJANGO_VERSION=1.10.5
@@ -17,5 +17,6 @@ install:
   - pip install -r requirements.txt
   - pip install -q Django==$DJANGO_VERSION
   - python setup.py -q install
-# command to run tests
-script: python test.py
+# command to run test
+script: python manage.py sqlmigrate studentlogin 0001
+
