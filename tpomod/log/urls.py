@@ -5,4 +5,5 @@ from . import views
 # We are adding a URL called /home
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+	url(r'^students/$', views.students ,name='students'),
 ]
