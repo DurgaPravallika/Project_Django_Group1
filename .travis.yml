@@ -16,7 +16,7 @@ install:
   
   
   - pip install -q Django==$DJANGO_VERSION
-  - python setup.py -q install
+  #- python setup.py -q install
 # command to run test
 script: py.test test.py
 
