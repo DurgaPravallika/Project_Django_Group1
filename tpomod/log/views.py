@@ -25,4 +25,8 @@ def students(request):
    studs = StudentInfo.objects.all()
    print studs
    return TemplateResponse(request,"students.html",{"studs": studs})	
-	
+
+@login_required(login_url="login/")
+def filter(request):
+    return render(request,"filter.html")
+    
