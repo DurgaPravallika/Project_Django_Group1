@@ -10,7 +10,7 @@ env:
 
 install:
   
-  
+  - pip install .
   - pip install -q Django==$DJANGO_VERSION
   
 # command to run tests
