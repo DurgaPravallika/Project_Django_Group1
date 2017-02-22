@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h2>Students List </h2>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+<div class="table-responsive">
+<table id="myTable" class="table table-striped"  width="100%"  >
+     <thead>  
+          <tr>  
+            <th data-sortable="true">ID</th>  
+            <th data-sortable="true">Name</th>  
+            <th data-sortable="true">Aggregate</th>  
+            <th data-sortable="true">Backlogs</th>
+			<th data-sortable="true">WISE</th>  
+            <th data-sortable="true">ATL</th>
+			<th data-sortable="true">MRND</th>
+			<th data-sortable="true">IOT</th>
+		  </tr>  
+        </thead>  
+        <tbody>  
+          {% for student in studs %}
+		     <tr>
+			     <td> {{ student.username }} </td>
+				 <td> {{ student.name }} </td>
+				 <td> {{ student.percentage }} </td>
+				 <td> {{ student.backlogs }} </td>
+				 {% if student.wise == 1 %}
+				 <td> Yes </td>
+				  {% else %}
+				     <td> No </td>
+			     {% endif %}				 
+				 {% if student.atl == 1 %}
+				 <td> Yes </td>
+				  {% else %}
+				     <td> No </td>
+			     {% endif %}				 
+				 {% if student.mrnd == 1 %}
+				 <td> Yes </td>
+				  {% else %}
+				     <td> No </td>
+			     {% endif %}				 
+				 {% if student.iot == 1 %}
+				 <td> Yes </td>
+				  {% else %}
+				     <td> No </td>
+			     {% endif %}				 
+				
+			 </tr>
+		  {% endfor %}
+		 </tbody>
+	</table>	  
+</div>
+</div>
+</div>
+
+
+{% endblock %}

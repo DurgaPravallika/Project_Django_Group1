@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1>Welcome {{ user.username }} </h1>
+            
+			<p>You are on your Dashboard</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+	<h2> Total no. of Students  : &nbsp &nbsp {{data}}  </h2>
+	 <br>
+	<p> WISE Students  &nbsp &nbsp &nbsp &nbsp: &nbsp &nbsp {{wise}}  </p>
+	<p> MRND Students  &nbsp &nbsp : &nbsp &nbsp {{mrnd}}  </p>
+	<p> ATL Students  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp: &nbsp &nbsp {{atl}}  </p>
+	<p> IOT Students  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp: &nbsp &nbsp {{iot}}  </p>
+	</div>
+</div>
+
+
+{% endblock %}

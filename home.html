@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1>Hello</h1>
+			<table>
+			
+<tr>
+<td>Name</td>
+<td><input type="text" name="Name" value="" placeholder = "Name" size="30"></td>
+</tr>
+<tr>
+<td>RollNo</td>
+<td><input type="text" name= "Roll no" value=""placeholder ="Roll No" size="30"></td>
+</tr>
+
+<tr>
+<td>EmailId</td>
+<td><input type="email" name="E-mail" value=""placeholder = "mail" size="30"></td>
+</tr>
+
+<tr>
+<td>Branch</td>
+<td><input type="text" name= "branch" value=""placeholder ="Branch" size="30"></td>
+</tr>
+
+<tr>
+<td>MobileNo</td>
+<td><input type="tel" name= "Mobile Number" value=""placeholder ="Phonenumber" size="30" maxlength="10"></td>
+</tr>
+
+<tr>
+<td>Extracirricular Activities:</td>
+</tr>
+<tr>
+<td><input type="checkbox" name="Activities" value="MRND"> MRND <td>
+</tr>
+<tr>
+<td><input type="checkbox" name="Activities" value="WISE"> WISE <td>
+</tr>
+<tr>
+<td><input type="checkbox" name="Activities" value="MRND"> ATL <td>
+</tr>
+
+<tr>
+<td colspan="2"> Certificates: <input type="file" name="img"></td>
+</tr>
+
+<tr>
+<td colspan="1">
+<center><font size="4"><b><td><input type="button" value="Submit"></td></b></font></center>
+</td>
+</tr>
+</table>
+            
+		<!-- <table>
+			<tr>
+            <td>FullName</td>
+            <td><input type=text name=textnames id="textname" size="30"></td>
+            </tr>
+            <tr>
+             <td>DOB</td>
+              <td><input type="text" name="dob" id="dob" size="30"></td>
+            </tr>
+            <tr>
+             <td>EmailId</td>
+              <td><input type="text" name="emailid" id="emailid" size="30"></td>
+            </tr>
+            <tr>
+              <td>Branch</td>
+              <td><select name="Branch">
+              <option value="-1" selected>select..</option>
+               <option value="CSE">CSE</option>
+              <option value="IT">IT</option>
+              <option value="ECE">ECE</option>
+              <option value="EEE">EEE</option>
+              </select></td>
+            </tr>
+         </table> -->
+        </div>
+    </div>
+</div>
+{% endblock %}
