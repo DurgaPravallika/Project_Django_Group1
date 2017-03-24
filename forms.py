@@ -1,10 +1,19 @@
+'''from django.forms import ModelForm
+
+from .models import AcademicInfo
+
+class AcademicInfoForm(ModelForm):
+	class Meta:
+		model = AcademicInfo
+		fields = "__all__"
+'''
 from django.forms import ModelForm
-from StudentInfo.models import AdditionalInfo
+from myapp.models import AcademicInfo
 #from django.utils import timezone
 #from django import forms
 
-class AdditionalInfoForm(ModelForm):
+class AcademicInfoForm(ModelForm):
 	class Meta:
-		model = AdditionalInfo
+		model = AcademicInfo
 		fields = "__all__"
 

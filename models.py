@@ -1,8 +1,11 @@
 from django.db import models
 
-# Create your models here.
-class AdditionalInfo(models.Model):
-	Activities = models.CharField(max_length=255)
-	Certificates =  models.CharField(max_length=255)
-	Internships = models.CharField(max_length=255)
-	Projects = models.CharField(max_length=255)
+
+class AcademicInfo(models.Model):
+	Branch = models.CharField(max_length=100)
+	Aggregate = models.CharField(max_length=200)
+	YearOfJoin = models.IntegerField()
+	SecPecentage = models.FloatField(max_length=200)
+	higherSecPer =models.CharField(max_length=200)
+	Backlogs=models.CharField(max_length=10)
+	
