@@ -1,4 +1,4 @@
-"""authtest URL Configuration
+"""firstproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -13,21 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import include, url
+from django.conf.urls import url,include
 from django.contrib import admin
-# Add this import
-from django.contrib.auth import views
-from log.forms import LoginForm
-
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-	url(r'', include('log.urls')),
-	#url(r'^login/$', 'django.contrib.auth.views.login', name='login'),
-   url(r'^login/$', views.login, {'template_name': 'login.html', 'authentication_form': LoginForm},name= 'login'), 
-  # kwargs = {'template_name': 'login.html','authentication_form': LoginForm}
-#url(r'^login/$', auth_views.login, kwargs=kwargs, name='login'),
- #	url(r'^$', views.academic, {'template_name': 'login.html'},name='academic'),
-          
-	url(r'^logout/$', views.logout, {'next_page': '/login'}),
+    url('^StudentInfo/',include('StudentInfo.urls')),
+    url(r'^admin/', admin.site.urls),
 ]

@@ -1,24 +1,14 @@
-<html>
-    <head>
-        <title>Student Details</title>
-    </head>
-    <body>
-<div>
-    <h1>Student Details</h1>
-</div>
-
-{% for detail in details %}
-    <div>
-        <p>RollNo: {{ detail.rollno }}</p>
-        <p>FirstName :{{ detail.firstname }}</p>
-        <p>LastName :{{ detail.lastname }}</p>
-        <p>PhoneNumber :{{ detail.phonenumber }}</p>
-        <p>Email :{{ detail.email }}</p>
-        <p>DOB:{{detail.dob}}</>
-
-    </div>
-{% endfor %}
-
-        
-    </body>
-</html>
+<h1>Student</h1>
+<form method="post">
+ 
+  
+{% csrf_token %}
+  
+ {{ form.as_p }}
+   
+<div class="form-actions">
+    
+ <button type="submit">Send</button>
+  
+  </div>
+</form>

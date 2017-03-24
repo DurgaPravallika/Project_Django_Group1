@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>AdditionalInfo</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:8000/TPOv1/insert_drive/" method="post">
+ {% csrf_token %}
+
+<label for="drive_name">Company Name </label>
+    <input id="certificates" type="text" name="certificates" value="">
+    <input id="activites" type="text" name="activites" value="">
+
+    <input type="submit" value="Create">
+   </form>
+</body>
+</html>
