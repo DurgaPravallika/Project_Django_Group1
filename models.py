@@ -12,3 +12,4 @@ class StudentDetails(models.Model):
    dob = models.CharField(max_length = 15)
    def _str_(self):
        return self.rollno
+
