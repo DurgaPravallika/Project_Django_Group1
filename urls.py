@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""firstpro URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from sample import views
-
+#from demo import views
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'',include('sample.urls')),
-   # url(r'^sample/register/$', views.registration, name = 'register'),
+    url(r'^admin/', include(admin.site.urls)),
+	url(r'',include('log.urls')),
+	
+	
 ]
